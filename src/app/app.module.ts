@@ -25,7 +25,7 @@ import { HomeComponent } from './pages/home/home.component';
     AppRoutingModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
   ],
   bootstrap: [AppComponent]
 })
