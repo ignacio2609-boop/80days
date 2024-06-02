@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ListComponent } from './pages/list/list.component';
 import { FormComponent } from './pages/form/form.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ReactiveFormsModule} from '@angular/forms';
+import { SharedDataService } from './shared-data.service';
 
 
 
@@ -22,10 +24,12 @@ import { HomeComponent } from './pages/home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [
     provideClientHydration(),
+    SharedDataService
   ],
   bootstrap: [AppComponent]
 })

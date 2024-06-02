@@ -1,13 +1,13 @@
 <div class="container-fluid justify-content-center p-2 col-3">
     <h1 class="display-4 p-1">Ingresa una ciudad</h1>
-    <form>
+    <form [formGroup]="myForm">
         <div class="mb-3">
             <label for="pais" class="form-label">País</label>
-            <input type="text" class="form-control" id="pais" placeholder="Ingresa un país">
+            <input formControlName="pais" type="text" class="form-control" id="pais" placeholder="Ingresa un país">
         </div>
         <div class="mb-3">
             <label for="ciudad" class="form-label">Ciudad</label>
-            <input type="text" class="form-control" id="ciudad" placeholder="Ingresa la ciudad">
+            <input formControlName="ciudad" type="text" class="form-control" id="ciudad" placeholder="Ingresa la ciudad">
         </div>
         <div class="mb-3">
             <label for="mes" class="form-label">Mes</label>
@@ -28,7 +28,7 @@
             </datalist>
         </div>
         <div class="d-grid gap-2 col-6 mx-auto">
-            <button class="btn btn-outline-dark" type="button">Añadir destino</button>
+            <button (click)="sendForm()" class="btn btn-outline-dark" type="button">Añadir destino</button>
         </div>
     </form>
 </div>

@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './list.component.css'
 })
 export class ListComponent {
-
+  ciudades: any []= [];
+  addCiudad(ciudad: any){
+    this.ciudades.push(ciudad);
+  }
 }

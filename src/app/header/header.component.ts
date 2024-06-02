@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  activeLink(){
-    document.getElementById("navForm")
+  class = "";
+
+  changeActive() {
+    this.class = "active";
   }
+    
 }
